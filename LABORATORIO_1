@@ -1,0 +1,458 @@
+string1 = 'Hola' 
+string2 = 'Mundo'
+#Se declaran nuestras cadenas de texto las cuales identificamos por estas dentro de comillas "llamadas string1 y string2"
+print(string1 + ' ' + string2)
+#Realizamos el print incluyendo el metodo de suma , en este caso se suman las cadenas de texto declaradas en la parte superior 
+
+int = 10
+#En caso de declarar enteros debemos aclarar el tipo de dato haciendo uso del 'int'
+print(int)
+print(type(int))
+#corroboramos el tipo de variable instanceada en este caso entero
+
+astring = "1"
+#declaramos un string y corroboramos el tipo de dato haciendo uso del 'type'
+
+my_int = int(astring)
+#hacemos uso del 'int' para indicar que queremos que cambie del tipo actual de dato a ser un entero y lo corroboramos con el 'type' que si sea un dato tipo entero
+print(type(my_int))
+
+string = "100"
+
+float_ = float(string)
+
+print(type(float_))
+#Declaramos una cadena y luego la convertimos a tipo flotante(float) y verificamos en el print que la conversion se realizo de manera correcta
+
+bool_ = False
+print(bool_)
+print(type(bool_))
+#declaramos una variable tipo booleano ,la imprimimos y verificamos que efectivamente sea un booleano (true o false)
+
+print("Addition ", 1+1)
+print("Subtraction ", 5-2)
+print("Multiplication ", 2*3)
+print("Division ", 10/2)
+print('exponent', 2**3)
+#vemos las operaciones basicas que podemos realizar con sus respectivos operadores 
+
+print(1/3)
+print(1.0/3)
+#Notamos que no existe diferencia entre operar int/int con float/int ni en su formato ni es su resultado
+
+list = ['Hola', 'dos', 155,3,1.2]
+#notamos que la manera de declarar una lista en en corchetes '[]' y que pueden almacenar cualquier tipo de dato separado por comas. 
+print(list)
+
+
+my_list = ['Hola', 'dos', 155,3,1.2]
+print(len(my_list))
+#Utilizamos el metodo 'len' con el fin de conocer el tamaño de nuestra lista
+print(my_list[0])
+#utilizamos el nombre de nuestra lista seguida por [] para conocer que dato se encuentra en esta ubicación 
+print(my_list[len(my_list) -1])
+#este metodo es utilizado para conocer el ultimo dato de una lista , debido a que siempre el conteo de posiciones empieza desde 0
+
+
+my_list = ['Hola', 'dos', 155,3,1.2]
+my_list[2] = 'f'
+#por medio de este metodo lo que realizamos es reemplazar el dato ubicado en la POSICION especificada ,eliminando el antiguo dato(en este caso elimino 155 y añadio 'f').
+print(my_list)
+
+my_list = ['Hola', 'dos', 155,3,1.2]
+print(my_list[1:3])
+#por medio del fomato [#:#] se especifica desde la posicion inicial que se desea imprimir hasta la posicion que se desea imprimir
+print(my_list[1:])
+#si esta vacio el segundo parametro [#:] se asume que se imprimira desde la posicion indicada hasta el final de la lista
+print(my_list[:3])
+#si esta vacio en primer parametro [:#] se asume que se imprime desde el primer dato hasta el dato especificado en la lista
+
+my_list = ['Hola', 'Mundo']
+my_list.append('Cruel')
+#Con el metodo '.append' llamamos el metodo que agrega un elemento a la lista e ingresa como ultimo dato de esta.
+print(my_list)
+my_list.remove('Hola')
+#con el metodo '.remove' eliminamos el valor especificado dentro del metodo
+print(my_list)
+
+tuple_ = ('Hola','cruel','mundo')
+print(tuple_[1:])
+#Al igual que las listas las tuplas reconocen en que posicion se encuentran los elementos de esta por lo cual en este caso imprime los valores de la posicion 1 al final "recordar que se empieza desde 0 el conteo de las posiciones"
+
+_list = ['a','b','c','b','c','a','d','a']
+_set = set(_list)
+#el metodo 'set' se encarga de eliminar los datos que esten repetidos en el arreglo y los guarda sin duplicados de manera desorganizada.
+print(_set)
+
+my_dic = {'house':'casa', 'dog':'perro', 'cat':'gato'}
+#los diccionarios funcionan con una llave la cual almacena de uno a mas datos y la manera correcta de llamar esta informacion es (nombre_diccionario[nombre_llave])
+print(my_dic['house'])
+
+_str = 'Hola mundo cruel'
+print(_str[5:])
+#en el caso de las cadenas no se distinguen en elementos si no en posiciones de cada dato RECORDAR QUE LAS POSICIONES SE CUENTAN DESDE 0.
+
+print('Hola mundo cruel'.count('o'))
+print('Hola mundo cruel'.find('d'))
+print('Hola mundo cruel'.replace('u','o'))
+#estos metodos de las cadenas nos permite contar, encontrar, reemplazar gracias a que las cadenas estan estructuradas caracter a caracter
+
+Parte 2
+
+
+
+#En las operaciones logicas encontramos una serie de comparaciones como se nombraran mas adelante y la salida sera un booleano aclarando si la comparacion realizada es verdadera o falsa
+print(154 == 44) #igualdad
+print(55 == 55)
+print(1 != 1) #diferente a
+print(52 >= 54) #mayor o igual
+print(1 <= 7) #menos igual
+
+#en este caso juntamos dos operaciones logicas acompañadas de operadores que unen la operacion
+print(1 > 2 and 2 > 3 ) #and es un perados que intersecta // en este caso las dos operaciones deberan ser verdaderas para un true o falso en el resto de los casos
+print(1 > 2 and 2 < 3) 
+print(2 > 1 or 3 < 2) #or realiza la operacion de union // el resultado de esta operacio  sera falsa si las dos operaciones logicas son falsas en el resto de los casos son verdaderas
+print(1 < 2 and 2 < 3)
+
+p = 1 > 0 #declaramos las variables en este caso operaciones logicas que seran TRUE o FALSE // en este caso es verdadero
+q = 2 > 3 #declaramos las variables en este caso operaciones logicas que seran TRUE o FALSE // en este caso es falso
+if p and q: # el if es un condicional que permite ejecutar alguna instruccion si la o las condiciones propuestas se cumplen
+    print('p and q is true')
+elif p and not q: #elif es una expresion luego de que el if anterios no se haya ejecutado entra a validar esta nueva condicion
+    print('q is false')
+elif q and not p:
+    print('p is false')
+else: #else se ejecuta si las condicionales previamente no se cumplieron 
+    print('None of p and q is true')
+# en este ejercicio la condicion que si cumplio fue la del "elif p an not q" por lo cual alli imprime el mensaje y acaba el programa
+
+i = 0
+while i < 10:
+    print(i)
+    i += 2 
+#While es un ciclo que se ejecuta n veces hasta cumplir la condicion que se le establezca
+
+for i in ['a','b','c','d']:
+    print(i)
+#for es un ciclo el cual recorre un arreglo y realiza el procedimiento propuesto dentro del for
+
+cosas = ['casa','arbol','piedra','andres','felipe'] #creamos una lista 
+cosas2 = ['casa','felipe']#creammos la segunda lista
+new_list = [] #creamos una lista vacia
+for i in cosas: #declaramos un for para recorrer la lista cosas
+    if i not in cosas2: #verificamos que los elementos de la lista cosas no esten en lista cosas y si esta condicion se cumple que realice el procedimiento planteado
+        new_list.append(i) #agrega los datos de la lista cosas en la lista new_list 
+print(new_list) #imprimimos new_list para verificar que realice de manera correcta las iteraciones
+
+
+cosas = ['casa','arbol','piedra','andres','felipe'] # creamos una lista con elementos
+for i in cosas:# creamos un for para recorrer la lista
+    print(i) #printeamos nuestro elemento de la lista en el que se encuentre el for
+    if i == 'piedra': #le pedimos que nos verifique si este es el elemento en el cual se encuentra de la lista
+        break #el break nos representa que alli termine de iterar el for y salga de este for // en este caso acaba el programa
+
+cosas = ['casa','arbol','piedra','andres','felipe'] # creamos una lista con elementos
+for i in cosas: # creamos un for para recorrer la lista
+    if i == 'piedra': #verificamos que el elemento del ciclo no sea 'piedra' 
+      
+      continue #permite que el for siga con sus iteraciones 
+    print(i)
+#en este caso debe imprimir todos los elementos de la lista con excepcion de 'piedra'
+
+list = [1,2,3,4,5]#creamos una lista con los numeros de 1-5
+squares = [x//2 for x in list] #creamos una lista por comprension la cual corresponde a crear un metodo dentro de la misma lista para realizar el codigo mas legible y corto
+print(squares) #verificamos que realice correctamente el metodo planteado
+
+cosas = ['casa','arbol','piedra','andres','felipe'] #creamos una lista 
+cosas2 = ['casa','felipe']#creammos la segunda lista
+new_list = [x for x in cosas if x in cosas2] #vemos que con ejemplos anteriores ya no hay necesidad de crear una lista vacia ,si no crear el metodo dentro de la misma lista para asi ahorrar lineas de codigo y tener una vision mas clara de nuestro procedimiento
+print(new_list)#verificamos que estemos realizando nuestro procedimiento de manera correcta
+
+print([(x, y) for x in [1,3,5] for y in [2,4,5] if x != y]) #por medio de esta lista de comprension realizamos un tipo de matriz con la condicional de que si x = y no se agregue a la lista
+print([str(x)+' vs '+str(y) for x in ['casa','arbol','piedra','andres','felipe'] for y in ['casa','felipe'] if x!=y])#unimos los elementos de la lista cada elemento de la primera mlista con el de la segunda lista excepto si ambos elemntos son iguales .
+
+Parte 3
+
+
+def product(x,z):# creamos una funcion por medio de la sentencia 'def' y el nombre para la funcion  seguido de los ´parametros que incluiremos en esta // el formato seria el siguiente en este caso 'def nombre_funcion(argumento1 , argumento2)
+    return x*z #declaramos el procedimiento que queremos que la funcion haga
+print(product(10,1)) # llamamos a la funcion por el nombre que le colocamos y los argumentos con los valores a realizar el procedimiento de la funcion
+print(product(10,10))
+
+def bienvenida():# por medio de esta funcion vemos que no siempre es necesario instancear parametros dentro de la funcion dependiendo de nuestro objetivo con esta
+    print('Hola Mundo') #declaramos el procedimiento que queremos que la funcion haga
+bienvenida()#finalmente llamamos la funcion para ejecutarla
+
+print(list(range(5)))
+print(list(range(5,11)))
+print(list(range(1,10,2)))
+#el rango imprime desde 0 es decir si 'range(5)' se debe imprimir 0,1,2,3,4
+#por medio del range retornamos una secuencia de numeros donde 'range(x,y,z)' donde x es donde queremos que inicie ,y donde termine y z el incremento de nuestro rango // si solo existe un argumento se sobre entiende que solo se especifica donde termina este rango
+
+lista = ['casa','arbol','piedra','andres','felipe']#creamos una lista con elementos
+print('La longitud de lista es {}'.format(len(lista))) #el metodo 'len(nombre_de_la_lista)'  nos retorna cuantos elementos hay en la lista
+for i in range(len(lista)):#recorremos la lista por medio del for
+    print(lista[i])#imprimimos cada dato de la lista
+
+list = [1,2,3,4,5]#creamos la lista
+print(list)#imprimimos la lista
+del list #por medio de el metodo 'del' eliminamos la lista y sus datos
+list #ahora el programa toma a list como un metodo lista ya sin ningun relacionamiento con alguna variable o lista
+
+lista = ['casa','arbol','piedra','andres','felipe']#creamos una lista con elementos
+list(map(len,lista))#por medio del metodo 'len' se realiza el conteo de cada elemento de la lista y con el 'map' transforma este iterable en una lista
+
+list(map(lambda x: x**2, range(10)))# este metodo incluye el metodo range explicado anteriormente y cada dato del 0-9 le saca su cuadrado y lo guarda en una lista //cabe recalcar que lambda permite que se puede hacer esta funcion
+
+sorted([5,2,3,4,1])# es metodo 'sorted' ordena la lista de menor a mayor
+
+price_list = [('AAPL',144.09),('GOOG',911.71),('MSFT',69),('FB',150),('WMT',75.32)]
+sorted(price_list, key = lambda x: x[1])
+
+class stock:
+    def __init__(self, ticker, open, close, volume):
+        self.ticker = ticker
+        self.open = open
+        self.close = close
+        self.volume = volume
+        self.rate_return = float(close)/open - 1
+ 
+    def update(self, open, close):
+        self.open = open
+        self.close = close
+        self.rate_return = float(self.close)/self.open - 1
+ 
+    def print_return(self):
+        print(self.rate_return)
+
+apple = stock('AAPL', 143.69, 144.09, 20109375)
+google = stock('GOOG', 898.7, 911.7, 1561616)
+
+apple.ticker
+google.print_return()
+google.update(912.8,913.4)
+google.print_return()
+
+apple.ceo = 'Tim Cook'
+apple.ceo
+
+dir(apple)
+
+class child(stock):
+    def __init__(self,name):
+        self.name = name
+
+aa = child('aa')
+print(aa.name)
+aa.update(100,102)
+print(aa.open)
+print(aa.close)
+print(aa.print_return())
+
+Parte 4
+
+import numpy as np 
+# Importamos NumPy, una libreria para computación científica en python, ofrece
+# herramientas para trabajar con listas multidimensionales (matrices)
+
+n_list = [14, 83, 'Azul', True]
+n_list = np.array(n_list)
+print(n_list, type(n_list))
+# Hemos creado una lista, luego de usar el comando np.array() el tipo de dato
+# es ndarray el cual representa una lista multidimensional
+
+n_list = [14, 83, 'Azul', True]
+n_list = np.array(n_list)
+print(n_list, type(n_list))
+# Hemos creado una lista, luego de usar el comando np.array() el tipo de dato
+# es ndarray el cual representa una lista multidimensional
+
+# Algunos métodos que tiene NumPy son: mean, std, sum, max, log
+num_array = [17,25,32,41,59,28,36,43]
+print(np.mean(num_array))
+print(np.std(num_array))
+print(np.sum(num_array))
+print(np.max(num_array))
+print(np.log(num_array))
+
+# Pandas
+import pandas as pd
+
+
+
+vals = [453, 349, 54]
+# Creamos un array de valores numéricos
+serie = pd.Series(vals)
+# Lo convertimos en una serie para poder usar los métodos de pandas
+print(serie)
+# Podemos modificar el index de nuestra serie ya existente
+serie.index = ['a','b','c']
+print(serie)
+# Una serie puede usar la lógica del sliced
+print(serie[:2])
+# También podemos actualizar los valores de una serie, deben ser del mismo tipo
+# de dato
+serie[0] = 12
+
+
+# Una serie puede tener el atributo nombre
+serie = pd.Series(vals, name ='Estado de cuenta mensual')
+print(serie)
+# Con describe podemos obtener los datos estadísticos de nuestra serie
+print(serie.describe())
+
+vals_index = pd.date_range('2022-03-14', periods = len(vals), freq = 'M')
+# Con la función pd.date_range() hemos creado los índices de nuestra serie 
+# tomando fechas que aumentan mensualmente
+serie.index = vals_index
+print(serie)
+
+print(serie.iloc[2])
+# Ya que muchas veces nuestro index es algo complejo, con .iloc podemos acceder 
+# a los valores que queramos siguiendo la lógica del index
+print(serie[serie < np.mean(serie)])
+# las series permiten añadir condiciones para clasificar datos
+
+Parte 5
+
+
+
+!pip install yfinance
+#Instalamos la libreria
+
+import yfinance as yf
+
+rui = yf.Ticker("RUI") #Llamamos la informacion de Russell 1000 Index 
+
+# get stock info
+print(rui.info)
+
+# get historical market data
+rui_table = rui.history(start="2015-01-01",  end="2016-12-31") # buscamos el historial de Russell 1000 Index durante 2015 y 2016
+rui_table
+
+rui = rui_table['Close']['2016'] #tomamos unicamente las cifras del año 2016 que tuvo RUI
+print(rui)
+
+print(rui['2016-4'])# pedimos que nos muestre los valores que obvtuvo RUI en el mes de abril
+
+rui['2016-2':'2017-4'] # tambien le podemos pedir un intervalo de meses de los valores de RUI durante estos
+
+print(rui.head(3)) # con '.head(x)' le pedimos x valores iniciales del resgistro que estemos manejando // en este caso del año 2016
+print(rui.tail(15))# con '.tail(x)' le pedimos x valores finales del resgistro que estemos manejando // en este caso del año 2016
+
+mensual = rui.resample('M').mean() #Por medio de la sentencia '.resample('M')' llammamos a los valores mensuales que tuvo el RUI // el 'M' es la frecuencia la cual referencia mensualmente// y el '.mean()' saca la media de estos valores que vemos impresos en consola
+print(mensual)
+
+semanal = rui.resample('W').mean() #Por medio de la sentencia '.resample('W')' llammamos a los valores semanalmente que tuvo el RUI // el 'W' es la frecuencia la cual referencia Semanalmente// y el '.mean()' saca la media de estos valores que vemos impresos en consola
+print(semanal) # verifica que se realice de manera correcta por medio de la impresion
+
+rui.resample('M').max() # En este caso con el '.max' recolectamos el valor mas alto de cada mes durante el periodo que estemos manejando en este caso 2016
+
+
+std = rui.resample('A').std() #calcula la desvicion estandar que existio durante el año las acciones RUI
+max = rui.resample('A').max() #calcula el valor maximo que obtuvo durante el año las acciones RUI
+min = rui.resample('A').min() #Calcula el valor mas bajo que obtuvieron las acciones RUI durante este año 2016
+
+
+print(std)
+print(max)
+print(min)
+
+ultimo_dia = rui.resample('M').agg(lambda x: x[-1]) #por medio de esta funcion recuperamos el ultimo valor que obtuvo la accion durante cada mes 
+print(ultimo_dia)# verificamos que si este imprimiendo el ultimo valor del mes de manera correcta
+
+retorno_mensual = rui.resample('M').agg(lambda x: x[-1]/x[0] - 1) #recolectamos los valores del primer dia del mes durante el periodo en que nos encontremos en este caso el 2016
+print(retorno_mensual)#verificamos que estemos recolectando los datos de manera correcta
+print(retorno_mensual.mean()) #verificamos la media de retorno mensual que obtiene la accion RUI
+print(retorno_mensual.std()) #calculamos la desviacion  estandar que tiene el retorno mensual de la accion RUI
+print(retorno_mensual.max()) #buscamos cual  fue el mes que mas tuvo retorno la moneda RUI
+
+print(ultimo_dia.diff()) #este metodo '.diff()' calcula la suma de las diferencias del valor de cada accion  de dias  consecutivos que tuvo la accion durante el mes
+print(ultimo_dia.pct_change()) #calcula el cambio porcentual que tuvo la accion durante el mes
+
+retorno_diario = ultimo_dia.pct_change()
+print(retorno_diario.fillna(0)) #Reemplaza el NaN por 0.0 para entender mejor los retornos diaros que obtuvo la accion
+
+retorno_diario = ultimo_dia.pct_change()
+retorno_diario.dropna() #Elimina del registro los valores que vengan NaN o sin retorno diario
+
+Data frames
+
+
+import pandas as pd
+
+dict = {'COMP': [155.58, 153.67, 152.36, 152.94, 153.49],'NDX':[898.7, 911.71, 906.69, 918.59, 926.99],
+        'RUI':[143.5, 144.09, 142.73, 144.18, 143.77]}#creamos un diccionario con los valores de las acciones colocando como llave el nombre de las acciones
+data_index = pd.date_range('2016-02-20',periods = 5, freq = 'W')#colocamos los rangos con el cual queremos que estas acciones queden en este caso desde el 2016-02-20 con una frecuencia semanal
+df = pd.DataFrame(dict, index = data_index) #tabula la informacion en una tabla
+print(df)
+
+df = rui_table
+print(df.Close.tail(5))
+print(df['Volume'].tail(5))
+
+rui_2016 = df['2016']#referenciamos el año en en cual nos queremos ubicar
+rui_month = rui_2016.resample('M').agg(lambda x: x[-1]) #obtenemos los valores con una frecuencia mensual 'M' basandonos en el ultimo dia del mes 
+print(rui_month) #verificamos que estemos capturando los valores deseados
+
+rui_bar = rui_month[['Open', 'High', 'Low', 'Close']] # podemos modidicar el nombre de las columnas de nuestra informacion 
+print(rui_bar)
+
+print(rui_month.loc['2016-03':'2016-06',['Open', 'High', 'Low', 'Close']])# tambien podemos especificar los intervalos de tiempo en los cuales queremos obtener esta informacion y sus respectivos nombres de la columna para  tener mayor claridad
+
+import numpy as np
+
+above = rui_bar[rui_bar.Close <= np.std(rui_bar.Close)] # entre corchetes podemos realizar operaciones logicas para asi obtener un subconjunto de informacio que pueda ser relevante para nosotros
+print(above)
+
+rui_bar['retorno'] = rui_bar.Close.pct_change() #Añadimos una nueva columna llamada retorno en el cual agregamos el retorno mensual de la accion , como lo haciamos de la misma manera que en la introduccion a data frame
+print(rui_bar)
+
+missing = rui_bar.isnull()
+print(missing)
+print('---------------------------------------------')
+print(missing.describe())
+#por medio de esta funcionalidad podemos verificar de manera mas sencilla donde encontramos un retorno de inversion NaN en la tabla
+
+print(missing[missing.retorno == True])# nos dice por medio de un booleano si existe en la columna un NaN
+
+drop = rui_bar.dropna() #si encuentra un NaN en retorno borra la fila o en este caso el mes
+print(drop)
+print('\n--------------------------------------------------\n')
+fill = rui_bar.fillna(0) # si encuentra un NaN lo reemplaza por una serie de 0's
+print(fill)
+
+serie1 = pd.Series([143.5, 144.09, 142.73, 144.18, 143.77], name = 'RUI')#creamos la serie1 dando los valores de las acciones de RUI
+serie2 = pd.Series([898.7, 911.71, 906.69, 918.59, 926.99], name = 'NDX')#creamos la serie1 dando los valores de las acciones de NDX
+data_frame = pd.concat([serie1,serie2], axis = 1)#por medio de 'concat' tabula esta informacion de las series y con axis = 1 denotamos que seran filas
+print(data_frame)
+
+log_price = np.log(rui_bar.Close)
+log_price.name = 'log_price'
+print(log_price)
+print('\n---------------------- separate line--------------------\n')
+concat = pd.concat([rui_bar, log_price], axis = 1)
+print(concat)
+
+df_volume = rui_table.loc['2015-01':'2015-04',['Volume', 'Stock Splits']].resample('M').agg(lambda x: x[-1])#en este metodo escogemos el periodo de tiempo por medio del formato ['año/mes/dia':'año,mes,dia'] // le colocamos el nombre a los comlumnas con el formato ['':''] // añadimos la frecuencia correspondiente con'.resample('frecuencia')// y la funcion para escoger el ultimo dia de cada mes con ayuda de lambda
+print(df_volume)
+print('\n---------------------- separate line--------------------\n')
+df_2017 = rui_table.loc['2014-10':'2015-04',['Open', 'High', 'Low', 'Close']].resample('M').agg(lambda x: x[-1])#en este metodo escogemos el periodo de tiempo por medio del formato ['año/mes/dia':'año,mes,dia'] // le colocamos el nombre a los comlumnas con el formato ['':''] // añadimos la frecuencia correspondiente con'.resample('frecuencia')// y la funcion para escoger el ultimo dia de cada mes con ayuda de lambda
+print(df_2017)
+
+concat = pd.concat([rui_bar, df_volume], axis = 1)# en este metodo por medio de .concat tabula la informacion seleccionada y axis le indica que la tabule en fila
+print(concat)
+
+concat = pd.concat([rui_bar,df_volume],axis = 1, join = 'inner')#por medio de este metodo se concatena la informacion producto de el inner join que devuelve las  filas cuando hay al menos una coincidencia en ambas tablas (rui_bar y df_volume)
+print(concat)
+
+append = rui_bar.append(df_2017)# en este metodo se agregan todos los registros de valores de las acciones RUI en 2017
+print(append)
+
+concat = pd.concat([rui_bar, df_2017], axis = 0)#concatena en la tabla los valores de las acciones RUI_bar // el axis = 0 organiza de la fecha mas reciente a la mas antigua en las filas
+print(concat)
+
+df_2017.columns = ['Change', 'High','Low','Close']#este metodo declara el nombre de las variables que implementara
+concat = pd.concat([rui_bar, df_2017], axis = 0)#concatena en la tabla los datos de rui_bar y df_2017 de fecha mas reciente a la mas antigua 
+print(concat)
